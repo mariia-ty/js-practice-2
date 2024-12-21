@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ <body>
+    <!--<button class="js-clear">Clear All</button>
+    <p class="output js-output"></p> -->
+    <div id="box"></div>
+    <script src="index.js"></script>
+</body>
+</html>
+<!-- Mini Game -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Лови м'ячик</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background-color: #f0f8ff;
+      }
+      #gameArea {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        border: 2px solid #000;
+      }
+      .ball {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-color: red;
+        border-radius: 50%;
+      }
+      #basket {
+        position: absolute;
+        bottom: 10px;
+        width: 100px;
+        height: 20px;
+        background-color: green;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="gameArea"><div id="basket"></div></div>
+    <script>
+      const gameArea = document.getElementById("gameArea");
+      const basket = document.getElementById("basket");
+      let basketX = gameArea.offsetWidth / 2 - basket.offsetWidth / 2;
+      basket.style.left = basketX + "px"; // Переміщення кошика за допомогою клавіш
+      document.addEventListener("keydown", (event) => {
+        const step = 15; // Крок переміщення
+        if (event.code === "ArrowLeft" && basketX > 0) {
+          basketX -= step;
+        } else if (
+          event.code === "ArrowRight" &&
+          basketX < gameArea.offsetWidth - basket.offsetWidth
+        ) {
+          basketX += step;
+        }
+        basket.style.left = basketX + "px";
+      }); // Генерація м'ячика при кліку мишею
+      gameArea.addEventListener("click", (event) => {
+        const ball = document.createElement("div");
+        ball.classList.add("ball");
+        ball.style.left = event.clientX - 15 + "px"; // Центруємо м'ячик
+        ball.style.top = "0px";
+        gameArea.appendChild(ball); // Анімація падіння м'ячика
+        const interval = setInterval(() => {
+          const ballY = ball.offsetTop + 5; // Падіння вниз
+          ball.style.top = ballY + "px"; // Перевірка, чи м'ячик потрапив у кошик
+          if (
+            ballY + ball.offsetHeight >=
+              gameArea.offsetHeight - basket.offsetHeight &&
+            ball.offsetLeft + ball.offsetWidth > basketX &&
+            ball.offsetLeft < basketX + basket.offsetWidth
+          ) {
+            clearInterval(interval);
+            ball.remove();
+            console.log("Ви зловили м’ячик!");
+          } // Видалення м'ячика, якщо він не потрапив у кошик
+          if (ballY > gameArea.offsetHeight) {
+            clearInterval(interval);
+            ball.remove();
+            console.log("М’ячик не спіймано");
+          }
+        }, 20);
+      });
+    </script>
+  </body>
+</html> -->
